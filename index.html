@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glow">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="orb orb-three"></div>
+    </div>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <div>
+            <p class="eyebrow">Live Weather</p>
+            <h1>Nova Forecast</h1>
+          </div>
+        </div>
+
+        <button class="ghost-btn" type="button">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero-card glass-card">
+          <div class="hero-controls">
+            <label class="search-box" for="city-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                id="city-search"
+                type="text"
+                placeholder="Search city..."
+                spellcheck="false"
+              />
+            </label>
+            <button
+              id="search-button"
+              class="icon-btn"
+              type="button"
+              aria-label="Search weather"
+            >
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </button>
+          </div>
+
+          <div class="weather-main">
+            <div class="weather-visual">
+              <div class="sun-badge">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <div class="cloud-layer cloud-a"></div>
+              <div class="cloud-layer cloud-b"></div>
+            </div>
+
+            <div class="weather-summary">
+              <p class="temp">28°C</p>
+              <p class="condition">Sunny</p>
+              <h2>Los Angeles</h2>
+              <p class="date">Friday, Jul 25</p>
+              <div class="feels-like">Feels like 31°C</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="details-grid" aria-label="Weather details">
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-droplet"></i>
+            <div>
+              <h3>Humidity</h3>
+              <p>74%</p>
+              <span>Comfortable</span>
+            </div>
+          </article>
+
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-wind"></i>
+            <div>
+              <h3>Wind Speed</h3>
+              <p>12 km/h</p>
+              <span>Gentle breeze</span>
+            </div>
+          </article>
+
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <h3>Pressure</h3>
+              <p>1014 hPa</p>
+              <span>Stable</span>
+            </div>
+          </article>
+
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-eye"></i>
+            <div>
+              <h3>Visibility</h3>
+              <p>16 km</p>
+              <span>Excellent</span>
+            </div>
+          </article>
+
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-sun"></i>
+            <div>
+              <h3>UV Index</h3>
+              <p>6.2</p>
+              <span>Moderate</span>
+            </div>
+          </article>
+
+          <article class="detail-card glass-card">
+            <i class="fa-solid fa-arrow-up"></i>
+            <div>
+              <h3>Sunrise</h3>
+              <p>06:12</p>
+              <span>Golden hour</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="forecast-panel">
+          <div class="section-heading">
+            <h3>Hourly Forecast</h3>
+            <a href="#">View More</a>
+          </div>
+
+          <div class="hourly-list">
+            <article class="hour-card glass-card">
+              <span>9 AM</span>
+              <i class="fa-solid fa-sun"></i>
+              <strong>28°C</strong>
+            </article>
+            <article class="hour-card glass-card">
+              <span>12 PM</span>
+              <i class="fa-solid fa-cloud-sun"></i>
+              <strong>31°C</strong>
+            </article>
+            <article class="hour-card glass-card">
+              <span>3 PM</span>
+              <i class="fa-solid fa-cloud"></i>
+              <strong>29°C</strong>
+            </article>
+            <article class="hour-card glass-card">
+              <span>6 PM</span>
+              <i class="fa-solid fa-cloud-moon"></i>
+              <strong>25°C</strong>
+            </article>
+            <article class="hour-card glass-card">
+              <span>9 PM</span>
+              <i class="fa-solid fa-moon"></i>
+              <strong>22°C</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="forecast-panel week-panel">
+          <div class="section-heading">
+            <h3>7-Day Forecast</h3>
+            <a href="#">See Details</a>
+          </div>
+
+          <div class="week-list">
+            <article class="day-card glass-card">
+              <span>Mon</span>
+              <i class="fa-solid fa-sun"></i>
+              <p>Sunny</p>
+              <strong>32° / 24°</strong>
+            </article>
+            <article class="day-card glass-card">
+              <span>Tue</span>
+              <i class="fa-solid fa-cloud-sun"></i>
+              <p>Cloudy</p>
+              <strong>30° / 23°</strong>
+            </article>
+            <article class="day-card glass-card">
+              <span>Wed</span>
+              <i class="fa-solid fa-cloud"></i>
+              <p>Overcast</p>
+              <strong>28° / 21°</strong>
+            </article>
+            <article class="day-card glass-card">
+              <span>Thu</span>
+              <i class="fa-solid fa-cloud-rain"></i>
+              <p>Rain</p>
+              <strong>26° / 19°</strong>
+            </article>
+            <article class="day-card glass-card">
+              <span>Fri</span>
+              <i class="fa-solid fa-sun"></i>
+              <p>Sunny</p>
+              <strong>31° / 23°</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="stats-row" aria-label="Weather statistics">
+          <article class="stat-pill glass-card">
+            <span>Air Quality</span>
+            <strong>Good</strong>
+          </article>
+          <article class="stat-pill glass-card">
+            <span>Rain Chance</span>
+            <strong>18%</strong>
+          </article>
+          <article class="stat-pill glass-card">
+            <span>Sunset</span>
+            <strong>19:41</strong>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
